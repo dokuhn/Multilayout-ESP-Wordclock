@@ -7,7 +7,7 @@
 #include <Arduino.h>
 #include <BH1750.h>
 
-#define LEDGPIO 27
+#define LEDGPIO 25
 
 OpenWMap weather;
 BH1750 lightMeter(0x23);
@@ -137,6 +137,8 @@ iUhrType *ClockWork::getPointer(uint8_t type) {
         return &_ro10x11;
     case Ger10x11schwaebisch:
         return &_de10x11schwaebisch;
+    case Ger10x10saarlaendisch:
+        return &_de10x10saarlaendisch;
     case Fr10x11:
         return &_fr10x11;
     case Se10x11:
